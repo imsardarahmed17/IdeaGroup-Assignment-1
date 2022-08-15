@@ -1,10 +1,18 @@
 // import logo from './logo.svg';
-import './App.css';
-import DenseAppBar from './components/AppBar';
+import "./App.css";
+import DenseAppBar from "./components/AppBar";
+import HomePage from "./components/HomePage";
+import About from "./components/About";
+import Accounts from "./components/Accounts";
+
 function App() {
+
   return (
     <div className="App">
-      <DenseAppBar/>
+      <DenseAppBar />
+      <HomePage />
+      <About />
+      <Parent/>
     </div>
   );
 }
