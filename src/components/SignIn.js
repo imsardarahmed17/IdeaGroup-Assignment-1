@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import TextField from '@mui/material/TextField';
 
 function SignIn({ myPassward, myUsername }) {
   const [passward, setPassward] = useState(null);
@@ -10,22 +11,15 @@ function SignIn({ myPassward, myUsername }) {
     setStatus(passward === myPassward && username === myUsername);
   };
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="enter username here"
-        onChange={(e) => setUsername(e.target.value)}
-      />
+    <div style={{ backgroundColor:"beige", color: "black"}}>
+      <h3>Login please;</h3>
+      <TextField id="standard-basic" label="enter username here" variant="standard"
+      onChange={(e) => setUsername(e.target.value)} /><br/><br/>
+      <TextField id="standard-basic" label="enter passward here" variant="standard" 
+      onChange={(e) => setPassward(e.target.value)}/>
       <br />
       <br />
-      <input
-        type="text"
-        placeholder="enter passward here"
-        onChange={(e) => setPassward(e.target.value)}
-      />
-      <br />
-      <br />
-      <Button onClick={verifyPassward}>Submit</Button>
+      <Button variant="contained" onClick={verifyPassward}>Submit</Button>
       {status ? (
         <h4>you have logged into your account</h4>
       ) : (
