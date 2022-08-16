@@ -1,5 +1,4 @@
-import { Home } from "@mui/icons-material";
-import { Card, Grid, Icon } from "@mui/material";
+import { Card, Grid } from "@mui/material";
 import { useState } from "react";
 import CustomStyledCard from "./StylizedCard";
 

@@ -1,4 +1,4 @@
-import { Avatar, Card } from "@mui/material";
+import { Avatar } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
