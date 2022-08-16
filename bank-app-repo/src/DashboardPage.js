@@ -15,17 +15,17 @@ export default function DashboardPage() {
             <Grid
               item
               marginTop={3}
-              marginBottom={1}
-              marginLeft={1}
+              marginbuttom={1}
+              marginLeft={16}
               marginRight={1}
               flexGrow={1}
             >
-              <Typography href="#">The Capital Bank Dashboard</Typography>
+              <Typography>The Capital Bank Dashboard</Typography>
             </Grid>
             <Grid
               item
               marginTop={1}
-              marginBottom={1}
+              marginbuttom={1}
               marginLeft={1}
               marginRight={1}
               flexGrow={0}
