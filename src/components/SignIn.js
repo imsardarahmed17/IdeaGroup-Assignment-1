@@ -1,29 +1,36 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
 
-function SignIn() {
+function SignIn({ myPassward, myUsername }) {
   const [passward, setPassward] = useState(null);
   const [username, setUsername] = useState(null);
-  const [status, setStatus] = useState(false)
-  let myUsername = "xyz"
-  let myPassward = "samalik"
-  const verifyPassward = ()=>{
-    setStatus (passward === myPassward && username === myUsername)
-  }
+  const [status, setStatus] = useState(false);
+
+  const verifyPassward = () => {
+    setStatus(passward === myPassward && username === myUsername);
+  };
   return (
     <div>
-      <input type="text" placeholder="username here" 
-      onChange ={(e)=> setUsername(e.target.value)} /><br/>
-      <input type="passward" placeholder="passward here" 
-      onChange ={(e)=> setPassward(e.target.value)} />
-      <br/><br/>
-      <button onClick={verifyPassward} >Click Me</button>
-      {
-        status ? <h4>you logged in</h4>:
-        <h4>enter username and passward</h4>
-      }
-      {/* <h1>{myPassward}</h1>
-      <h1>{myUsername}</h1> */}
-
+      <input
+        type="text"
+        placeholder="enter username here"
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <br />
+      <br />
+      <input
+        type="text"
+        placeholder="enter passward here"
+        onChange={(e) => setPassward(e.target.value)}
+      />
+      <br />
+      <br />
+      <Button onClick={verifyPassward}>Submit</Button>
+      {status ? (
+        <h4>you have logged into your account</h4>
+      ) : (
+        <h4>enter correct username and passward</h4>
+      )}
     </div>
   );
 }

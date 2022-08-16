@@ -3,12 +3,12 @@
 import SignIn from "./SignIn";
 
 function Parent() {
-// let myUsername = "xyz"
-// let myPassward = "samalik"
+  let myUsername = "iamsamalik";
+  let myPassward = "abc";
   return (
     <div>
       {/* <Accounts/> */}
-      <SignIn />
+      <SignIn myUsername={myUsername} myPassward={myPassward} />
     </div>
   );
 }
