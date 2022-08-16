@@ -2,17 +2,18 @@
 import "./App.css";
 import DenseAppBar from "./components/AppBar";
 import HomePage from "./components/HomePage";
-import About from "./components/About";
+// import About from "./components/About";
 import Accounts from "./components/Accounts";
-
+import Parent from "./components/Parent";
 function App() {
 
   return (
     <div className="App">
       <DenseAppBar />
       <HomePage />
-      <About />
+      {/* <About /> */}
       <Parent/>
+     
     </div>
   );
 }
