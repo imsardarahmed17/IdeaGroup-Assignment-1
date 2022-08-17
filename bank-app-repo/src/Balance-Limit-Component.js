@@ -19,8 +19,9 @@ export default function BalanceLimitComponent() {
           sx={{ marginLeft: 2, marginRight: 2, marginTop: 2, marginBottom: 2 }}
         >
           <CustomStyledCard midValue="Dashboard"></CustomStyledCard>
-          <CustomStyledCard midValue="Bills"></CustomStyledCard>
+          <CustomStyledCard midValue="Paybill"></CustomStyledCard>
           <CustomStyledCard midValue="Account"></CustomStyledCard>
+          <CustomStyledCard midValue="Send Money"></CustomStyledCard>
         </Card>
       </Grid>
       <Grid container marginLeft={5} marginTop={10} boxShadow={5}>
