@@ -1,7 +1,6 @@
 import Card from "@mui/material/Card";
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Paper from "@mui/material/Paper";
 
 export default function CustomStyledCard({
   heading,
@@ -10,44 +9,79 @@ export default function CustomStyledCard({
   fontsize = [24],
 }) {
   return (
-    <Grid container marginTop={2} boxShadow={5}>
+    <Grid
+      sx={{
+        borderRadius: 5,
+      }}
+      container
+      marginTop={2}
+      boxShadow={5}
+    >
       <Card
         variant="outlined"
-        sx={{ minWidth: 247, minHeight: 82, maxWidth: 247, mxHeight: 82 }}
+        sx={{
+          bgcolor: "#1976d2",
+          minWidth: 247,
+          minHeight: 20,
+          maxWidth: 247,
+          mxHeight: 20,
+          borderRadius: 5,
+        }}
       >
-        <Paper
-          sx={{ minWidth: 247, minHeight: 82, maxWidth: 247, maxHeight: 82 }}
+        <Grid
+          sx={{
+            borderRadius: 5,
+          }}
+          container
+          justifyContent="center"
+          marginTop={1}
         >
-          <Grid container justifyContent="center" marginTop={2}>
-            <Grid item>
-              <Typography color="black" variant="subtitle1">
-                {heading}
-              </Typography>
-            </Grid>
+          <Grid item>
+            <Typography color="white" variant="subtitle1">
+              {heading}
+            </Typography>
           </Grid>
-          <Grid container justifyContent="center" marginTop={2}>
-            <Grid item>
-              <Typography variant="subtitle1" sx={{ fontSize: fontsize }}>
-                {midValue}
-              </Typography>
-            </Grid>
+        </Grid>
+        <Grid
+          sx={{
+            borderRadius: 5,
+          }}
+          container
+          justifyContent="center"
+          marginTop={2}
+        >
+          <Grid item>
+            <Typography
+              marginTop={1}
+              color="white"
+              variant="subtitle1"
+              sx={{ fontSize: fontsize }}
+            >
+              {midValue}
+            </Typography>
           </Grid>
-          <Grid container justifyContent="center">
-            <Grid item>
-              <Typography
-                color="black"
-                variant="h5"
-                sx={{ fontSize: fontsize }}
-                marginTop={-2}
-                marginBottom={5}
-                marginLeft={1}
-                marginRight={1}
-              >
-                {subs}
-              </Typography>
-            </Grid>
+        </Grid>
+        <Grid
+          sx={{
+            borderRadius: 5,
+          }}
+          container
+          justifyContent="center"
+        >
+          <Grid item>
+            <Typography
+              color="white"
+              variant="h5"
+              sx={{ fontSize: fontsize }}
+              marginTop={-2}
+              marginBottom={5}
+              marginLeft={1}
+              marginRight={1}
+            >
+              {subs}
+            </Typography>
           </Grid>
-        </Paper>
+        </Grid>
       </Card>
     </Grid>
   );
