@@ -16,7 +16,7 @@ export default function CustomStyledCard(props) {
         >
           <Grid container justifyContent="center" marginTop={2}>
             <Grid item>
-              <Typography color="black" variant="h5">
+              <Typography color="black" variant="subtitle1">
                 {heading}
               </Typography>
             </Grid>
@@ -32,7 +32,7 @@ export default function CustomStyledCard(props) {
             <Grid item>
               <Typography
                 color="black"
-                variant="subtitle1"
+                variant="h5"
                 sx={{ fontSize: fontsize }}
                 marginTop={-2}
                 marginBottom={5}
