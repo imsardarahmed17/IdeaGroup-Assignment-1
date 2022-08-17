@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 export default function CustomStyledCard(props) {
   const { heading, midValue = [null], subs, fontsize = [24] } = props;
   return (
-    <Grid container marginTop={8} boxShadow={5}>
+    <Grid container marginTop={2} boxShadow={5}>
       <Card
         variant="outlined"
         sx={{ minWidth: 247, minHeight: 82, maxWidth: 247, mxHeight: 82 }}
