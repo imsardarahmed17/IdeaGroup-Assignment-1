@@ -6,7 +6,8 @@ function SignIn({ myPassward, myUsername }) {
   const [passward, setPassward] = useState(null);
   const [username, setUsername] = useState(null);
   const [status, setStatus] = useState(false);
-
+  
+//function to confirm uername and passward
   const verifyPassward = () => {
     setStatus(passward === myPassward && username === myUsername);
   };
