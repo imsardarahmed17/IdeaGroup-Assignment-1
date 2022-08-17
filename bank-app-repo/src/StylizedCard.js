@@ -3,8 +3,12 @@ import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 
-export default function CustomStyledCard(props) {
-  const { heading, midValue = [null], subs, fontsize = [24] } = props;
+export default function CustomStyledCard({
+  heading,
+  midValue = [null],
+  subs,
+  fontsize = [24],
+}) {
   return (
     <Grid container marginTop={2} boxShadow={5}>
       <Card
