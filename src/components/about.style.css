@@ -1,0 +1,13 @@
+.aboutBody{
+    padding-left: 10px;
+    text-align: left;
+    color: black;
+}
+.myTableStyle{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align:center;
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
