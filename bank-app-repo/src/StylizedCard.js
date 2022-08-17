@@ -1,5 +1,5 @@
 import Card from "@mui/material/Card";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 export default function CustomStyledCard({
@@ -27,6 +27,7 @@ export default function CustomStyledCard({
           mxHeight: 20,
           borderRadius: 5,
         }}
+        elevation={100}
       >
         <Grid
           sx={{

@@ -1,5 +1,7 @@
 import { Card, Grid } from "@mui/material";
 import { useState } from "react";
+import PageMenu from "./Page-Menu";
+import SendMoney from "./SendMoney";
 import CustomStyledCard from "./StylizedCard";
 import TransactionList from "./TransactionList";
 
@@ -14,19 +16,7 @@ export default function BalanceLimitComponent() {
       container
       wrap="nowrap"
     >
-      <Grid
-        container
-        marginRight={5}
-        marginTop={14}
-        boxShadow={5}
-        sx={{ maxWidth: 270, borderRadius: 5 }}
-      >
-        <Grid marginLeft={1} marginRight={1} marginTop={1} marginBottom={2}>
-          <CustomStyledCard midValue="Dashboard"></CustomStyledCard>
-          <CustomStyledCard midValue="Paybill"></CustomStyledCard>
-          <CustomStyledCard midValue="Account"></CustomStyledCard>
-        </Grid>
-      </Grid>
+      <PageMenu />
       <Grid container>
         <Grid
           item
@@ -35,7 +25,7 @@ export default function BalanceLimitComponent() {
           }}
           container
           marginLeft={5}
-          marginTop={14}
+          marginTop={10}
           boxShadow={5}
         >
           <Card
@@ -47,10 +37,7 @@ export default function BalanceLimitComponent() {
             }}
             elevation={100}
           >
-            <CustomStyledCard
-              heading="Send Money"
-              subs={"$" + " " + currentBalance}
-            ></CustomStyledCard>
+            <SendMoney></SendMoney>
           </Card>
         </Grid>
         <Grid
