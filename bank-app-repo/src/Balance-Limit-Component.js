@@ -12,7 +12,9 @@ export default function BalanceLimitComponent() {
 
   const handleChange = useCallback(
     props => {
-      setCurrentBalance(currentBalance - amount);
+      if (currentBalance > 0) {
+        setCurrentBalance(currentBalance - amount);
+      }
     },
     [amount]
   );
