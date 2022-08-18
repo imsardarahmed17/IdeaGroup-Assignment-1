@@ -1,8 +1,9 @@
 import { Button, Card, Grid, TextField, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
 
-export default function SendMoney() {
-  // const [amount, setAmount] = useState();
+export default function SendMoney({ setAmount, setClicked }) {
+  function getData(val) {
+    setAmount(val.target.value);
+  }
   return (
     <Grid
       sx={{
@@ -38,7 +39,7 @@ export default function SendMoney() {
             <TextField
               variant="filled"
               label="Receiver's Name"
-              // onKeyDown={setAmount(1)}
+              onChange={getData}
             ></TextField>
           </Grid>
           <Grid>
@@ -48,7 +49,13 @@ export default function SendMoney() {
             <TextField variant="filled" label="Amount"></TextField>
           </Grid>
           <Grid>
-            <Button variant="contained">
+            <Button
+              variant="contained"
+              onClick={() => {
+                setClicked(true);
+                setClicked(false);
+              }}
+            >
               <Typography>Send</Typography>
             </Button>
           </Grid>

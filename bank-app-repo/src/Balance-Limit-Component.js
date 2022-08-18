@@ -1,5 +1,5 @@
 import { Card, Grid } from "@mui/material";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import PageMenu from "./Page-Menu";
 import SendMoney from "./SendMoney";
 import CustomStyledCard from "./StylizedCard";
@@ -8,6 +8,18 @@ import TransactionList from "./TransactionList";
 export default function BalanceLimitComponent() {
   const [currentBalance, setCurrentBalance] = useState(4300);
   const [creditLimit, setCreditLimit] = useState(6000);
+  const [amount, setAmount] = useState(null);
+  const [clicked, setClicked] = useState(false);
+  console.log(amount);
+
+  const handleChange = useCallback(
+    props => {
+      setCurrentBalance(currentBalance - amount);
+      console.log(currentBalance);
+    },
+    [amount, clicked]
+  );
+
   return (
     <Grid
       sx={{
@@ -37,7 +49,11 @@ export default function BalanceLimitComponent() {
             }}
             elevation={100}
           >
-            <SendMoney></SendMoney>
+            <SendMoney
+              handleChange={handleChange}
+              setAmount={setAmount}
+              setClicked={setClicked}
+            ></SendMoney>
           </Card>
         </Grid>
         <Grid
