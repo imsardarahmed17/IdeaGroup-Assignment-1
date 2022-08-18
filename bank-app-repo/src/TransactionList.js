@@ -22,7 +22,7 @@ export default function TransactionList() {
       >
         <CustomStyledCard
           heading="Last Transaction"
-          subs={"Spotify Subscription " + "-" + "$" + lastTransaction}
+          subs={"Spotify Subscription - $" + lastTransaction}
           fontsize={16}
         ></CustomStyledCard>
       </Card>
