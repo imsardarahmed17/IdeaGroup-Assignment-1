@@ -1,9 +1,10 @@
 import { Button, Card, Grid, TextField, Typography } from "@mui/material";
 
-export default function SendMoney({ setAmount, setClicked }) {
+export default function SendMoney({ setAmount, amount, handleChange }) {
   function getData(val) {
     setAmount(val.target.value);
   }
+
   return (
     <Grid
       sx={{
@@ -36,24 +37,23 @@ export default function SendMoney({ setAmount, setClicked }) {
           marginRight={1}
         >
           <Grid item>
-            <TextField
-              variant="filled"
-              label="Receiver's Name"
-              onChange={getData}
-            ></TextField>
+            <TextField variant="filled" label="Receiver's Name"></TextField>
           </Grid>
           <Grid>
             <TextField variant="filled" label="Receiver's IBN"></TextField>
           </Grid>
           <Grid>
-            <TextField variant="filled" label="Amount"></TextField>
+            <TextField
+              onChange={getData}
+              variant="filled"
+              label="Amount"
+            ></TextField>
           </Grid>
           <Grid>
             <Button
               variant="contained"
               onClick={() => {
-                setClicked(true);
-                setClicked(false);
+                handleChange(amount);
               }}
             >
               <Typography>Send</Typography>
