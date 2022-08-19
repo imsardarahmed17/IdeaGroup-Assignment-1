@@ -9,6 +9,8 @@ export default function BalanceLimitComponent() {
   const [currentBalance, setCurrentBalance] = useState(4300);
   const [creditLimit, setCreditLimit] = useState(6000);
   const [amount, setAmount] = useState(null);
+  const [label, setLabel] = useState("Amount");
+  const [buttonState, setButtonState] = useState(true);
 
   const handleChange = useCallback(
     props => {
@@ -50,8 +52,12 @@ export default function BalanceLimitComponent() {
           >
             <SendMoney
               handleChange={handleChange}
-              setAmount={setAmount}
               amount={amount}
+              setAmount={setAmount}
+              newLabel={label}
+              setLabel={setLabel}
+              buttonState={buttonState}
+              setButtonState={setButtonState}
             ></SendMoney>
           </Card>
         </Grid>

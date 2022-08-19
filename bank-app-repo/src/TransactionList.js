@@ -5,6 +5,10 @@ import { useState } from "react";
 
 export default function TransactionList() {
   const [lastTransaction, setLastTransaction] = useState(30);
+  const [heading, setHeading] = useState("Last Transaction");
+  const [subs, setSubs] = useState(
+    `Spotify Subscription:  - $ ${lastTransaction}`
+  );
   return (
     <Grid
       sx={{
@@ -21,8 +25,8 @@ export default function TransactionList() {
         elevation={100}
       >
         <CustomStyledCard
-          heading="Last Transaction"
-          subs={"Spotify Subscription - $" + lastTransaction}
+          heading={heading}
+          subs={subs}
           fontsize={16}
         ></CustomStyledCard>
       </Card>
