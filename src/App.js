@@ -4,19 +4,18 @@ import DenseAppBar from "./components/AppBar";
 import HomePage from "./components/HomePage";
 import Parent from "./components/Parent";
 import About from "./components/About";
+import UseEffect from "./hooks.practice/UseEffect";
+import UseMemo from "./hooks.practice/UseMemo";
 // import Accounts from "./components/Accounts";
-// import TabScrollButton from '@mui/material/TabScrollButton';
-
 function App() {
-
   return (
     <div className="App">
       <DenseAppBar />
       <HomePage />
-      <Parent/>
       <About />
-      
-   
+      <Parent />
+      {/* <UseMemo/> */}
+      {/* <UseEffect/> */}
     </div>
   );
 }

@@ -1,16 +1,19 @@
-import React, {useState} from "react";
-import './about.style.css'
+import React, { useState } from "react";
+import "./about.style.css";
 
 function About() {
-  const [info, setInfo] = useState(
-[{branchId:1, name: "Head office branch", city: "Islamabad", number:125523},
-{branchId:2, name: "Liberty branch", city: "Lahore", number:5468454},
-{branchId:3, name: "Clifton branch", city: "karachi", number:12235488},
-{branchId:1, name: "Gulberg", city: "Mianwali", number:178542}
-]    
-  )
+  const [info, setInfo] = useState([
+    {
+      branchId: 1,
+      name: "Head office branch",
+      city: "Islamabad",
+      number: 125523,
+    },
+    { branchId: 2, name: "Liberty branch", city: "Lahore", number: 5468454 },
+    { branchId: 3, name: "Clifton branch", city: "karachi", number: 12235488 },
+    { branchId: 1, name: "Gulberg branch", city: "Mianwali", number: 178542 },
+  ]);
   return (
-    
     <div className="aboutBody">
       <h3> Passion Reborn at TCB</h3>
       <ul>
@@ -43,22 +46,17 @@ function About() {
             <td>City</td>
             <td>Contact Info</td>
           </tr>
-          {
-          info.map(iobj => 
+          {info.map((iobj) => (
             <tr key={1}>
               <td>{iobj.branchId}</td>
               <td>{iobj.name}</td>
               <td>{iobj.city}</td>
               <td>{iobj.number}</td>
             </tr>
-
-          )
-        }
+          ))}
         </tbody>
       </table>
-      <ul>
-        
-      </ul>
+      <ul></ul>
     </div>
   );
 }
