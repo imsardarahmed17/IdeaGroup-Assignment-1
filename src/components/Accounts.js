@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 // import Bills from "./Bills";
 
 function Accounts() {
-  const [userName, setUserName] = useState(null)
-  const [passward, setPassward] = useState(null)
-  const [bill, setBill] = useState(0);
+  // const [userName, setUserName] = useState(null)
+  // const [passward, setPassward] = useState(null)
+  // const [bill, setBill] = useState(0);
 
  const usersInfo = [
     {
@@ -34,31 +34,21 @@ function Accounts() {
     }
   ]
 
-  const checkResult = (bill)=>{
-    if (userName === usersInfo.userName && passward === usersInfo.passward) {
-      ()=>{
-        let result = usersInfo.totalAmount - bill
-      }
-    } else {
-      result = "your username or passward is incorrect"
-    }
-  }
+let result = usersInfo.find((element)=>{
+  return element.totalAmount > 150000
+})
+console.log(result);
   return (
     <div>
       {/* <Bills Mybill = {setBill}/> */}
-      <input type="number" placeholder = "write username here" 
+      {/* <input type="number" placeholder = "write username here" 
       onChange={setUserName((val)=> val.targrt.value)}/>
       <input placeholder = "Write Passward here" 
       onChange={setPassward((val)=> val.targrt.value)}/>
       <input placeholder = "Write your bill here" 
-      onChange={setBill((val)=> val.targrt.value)}/>
-
-      <button onClick={checkResult()}>Get Result</button>
-      {
-          result > 0 ? <h4>your bill is paid and ur remaining balance is {result}</h4>:
-          <h4>you don't have enough amount in your account to pay this bill</h4>
-      }
-
+      onChange={setBill((val)=> val.targrt.value)}/> */}
+<h1>{result}</h1>
+      <button>Get Result</button>
     </div>
   )
 }
